@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <title>开始私聊。。。</title> 
+        <link rel="stylesheet" href="css/private.css">
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div style="height:1px;"></div>
+        <div class="chat">
+            <header>
+                <h1><%=othername%></h1>
+                <div class="exit"><img src="/img/exit.png" alt="退出" title="退出"></div>
+            </header>
+            <div class="ch">
+                <div class="chats">
+                    <ul>
+                        <!-- <li>
+                            <p class="who"><span class="user">武松</span><span class="date">2018/5/12</span></p>
+                            <p class="hua">今天天气怎么样</p>
+                        </li>
+                        <li>
+                            <p class="who"><span class="user">鲁智深</span><span class="date">2018/5/12</span></p>
+                            <p class="hua">今天热的要死了</p>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="msg">
+                    <textarea class="word" name="" id="" cols="30" rows="10"></textarea>
+                    <a class="send" href="">发送</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.7.2.js"></script>
+        <script src="js/utils.js"></script>
+        <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <script src="js/index.js"></script>
+        <script>
+            // var socket = io();
+            var $word = $(".word");
+            var $send = $(".send");
+            var $friendsUl = $(".friends ul");
+            var $chatsUl = $(".chats ul");
+            
+            // 监听connect事
+            
+
+
+        </script>
+    </body>
+</html>

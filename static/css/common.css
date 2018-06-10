@@ -1,0 +1,131 @@
+@keyframes cc{
+    0%{opacity: 0.4; transform: scale(0.1); top: -500px;}
+    50%{opacity: 0.4; transform: scale(0.1) rotateX(90deg); top: -50px;}
+    100%{opacity: 1; transform: scale(1) rotateX(0deg); top: 0;}
+}
+@media only screen and (max-width: 500px) {
+    .login{
+        width: 95%!important;
+    }
+    .sr{
+        padding:30px 70px!important;
+    }
+}
+*{
+    font-family:'Microsoft YaHei','Lantinghei SC','Open Sans',Arial,'Hiragino Sans GB','STHeiti','WenQuanYi Micro Hei','SimSun',sans-serif;
+    font-size: 14px;
+}
+html,body{
+    height:100%;
+    width:100%;
+    background-color: #eee;
+    perspective:500px;
+}
+.login{
+    position: relative;
+    top: 0;
+    width:450px;
+    margin: 10% auto;
+    background:rgba(255,255,255,1);
+    border-radius: 10px;
+    color: #27d;
+    animation: cc 4s ease-in-out ;
+    border: 2px solid #eee;
+}
+.login header{
+    padding: 10px;
+    border-bottom: 1px solid #27d;
+}
+.login header h1{
+    margin:0;
+    padding:0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+}
+.sr{
+    padding:30px 70px 35px;
+}
+.name{
+    position:relative;
+    margin-bottom:30px;
+    clear:both;
+    border:1px solid #27d;
+    width: 100%;
+    height: 35px;
+    padding: 5px 0 0 5px;
+}
+.name input {
+    width: 100%;
+    height: 18%;
+    height: 80%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.name input.username {
+    background: url(../img/username.png) no-repeat top left;
+    background-size: 30px;
+}
+.name input.password {
+    background: url(../img/password.png) no-repeat left top;
+    background-size: 30px;
+}
+.name input:hover {
+    border: none;
+}
+.btn {
+    width:320px;
+    height:40px;
+    text-align: center;
+    position: relative;
+}
+.dl {
+    width:150px;
+    height:40px;
+    display: block;
+    background:#27d;
+    line-height:40px;
+    margin: 0 auto;
+    color:#fff;
+    border:0;
+    font-size:18px;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.red {
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    font-size: 22px;
+    color: red;
+}
+.redColor {
+    color: red;
+}
+.tip {
+    color: #A8A8A8;
+}
+.tip .icon {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    display: none;
+
+}
+.tip .cue {
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    font-size: 12px;
+}
+.dn {
+    display: none;
+}

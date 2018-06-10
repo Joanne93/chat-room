@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <title>注册</title>
+        <link rel="stylesheet" href="css/common.css"> 
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div style="height:1px;"></div>
+        <div class="login">
+            <header>
+                <h1>欢迎注册</h1>
+            </header>
+            <div class="sr">
+                <form id="loginForm">
+                    <div class="name">
+                        <span class="red">*</span>
+                        <input name="username" type="text" placeholder="这里输入登录名" class="username">
+                        <p class="tip">
+                            <img class="icon" src="img/right.png" alt="提示图标">
+                            <span class="cue">6~18个字符，可使用字母、数字、下划线，需以字母开头</span>
+                        </p>
+                    </div>
+                    <div class="name">
+                        <span class="red">*</span>
+                        <input name="password" type="password" placeholder="这里输入登录密码" class="password">
+                        <p class="tip">
+                            <img class="icon" src="img/right.png" alt="提示图标">
+                            <span class="cue">6~16个字符，区分大小写</span>
+                        </p>
+                    </div>
+                    <div class="name">
+                        <span class="red">*</span>
+                        <input name="repassword" type="password" placeholder="这里输入确认密码" class="password" id="repassword">
+                        <p class="tip">
+                            <img class="icon" src="img/right.png" alt="提示图标">
+                            <span class="cue">请再次填写密码</span>
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <input type="button" class="dl" id="registerBtn" value="立即注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.7.2.js"></script>
+        <script src="js/utils.js"></script>
+        <script>
+            var type = "register";
+        </script>
+        <script src="js/common.js"></script>
+    </body>
+</html>

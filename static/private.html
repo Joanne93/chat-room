@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <title>开始私聊。。。</title> 
+        <link rel="stylesheet" href="css/private.css">
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div style="height:1px;"></div>
+        <div class="chat">
+            <header>
+                <h1>对方</h1>
+                <div class="exit"><img src="/img/exit.png" alt="退出" title="退出"></div>
+            </header>
+            <div class="ch">
+                <div class="chats">
+                    <ul>
+                        <!-- <li>
+                            <p class="who"><span class="user">武松</span><span class="date">2018/5/12</span></p>
+                            <p class="hua">今天天气怎么样</p>
+                        </li>
+                        <li>
+                            <p class="who"><span class="user">鲁智深</span><span class="date">2018/5/12</span></p>
+                            <p class="hua">今天热的要死了</p>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="msg">
+                    <textarea class="word" name="" id="" cols="30" rows="10"></textarea>
+                    <a class="send" href="">发送</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.7.2.js"></script>
+        <script src="js/utils.js"></script>
+        <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <script src="js/index.js"></script>
+        <script>
+            // var socket = io();
+            var $word = $(".word");
+            var $send = $(".send");
+            var $friendsUl = $(".friends ul");
+            var $chatsUl = $(".chats ul");
+            
+            // 监听connect事件
+            /* socket.on("connect", function() {
+                console.log("前台连接建立了。。。"+socket.id);
+
+                // 告诉服务器我上线了
+                socket.emit("come", {username: '<%=username%>'});
+
+                $send.click(function() {
+                    var word = $word.val();
+                    // 告诉服务器我说话了
+                    socket.emit("speak", word);
+                    $word.val("");
+                    return false;
+                })
+            }) */
+
+
+            // 服务器通知我谁上线了，我把它渲染上去。为什么传的是所有人而不是刚上线的那个人，因为如果是刚上线那个人，那个人的用户列表里只有自己
+            /* socket.on("someoneCome", function(arr) {
+                console.log("有人来了");
+                console.log(arr);
+                $friendsUl.empty();
+                for(var i in arr) {
+                    var $li = $("<li></li>");
+                    $li.html(arr[i].username);
+                    $li.attr("data-id",arr[i].id);
+                    $friendsUl.append($li);
+                }
+            }) */
+
+            //服务器通知我谁说话了，我把它说的话渲染上去,这个并不会把之前所有人说的话都传过来，所以qq后上线的人看不见之前的聊天记录
+            /* socket.on("someoneSpeak", function(user) {
+                console.log(user.username+"说话了");
+                var time = new Date().toLocaleString();
+                var $p1 = $('<p class="who"><span class="user">'+user.username+'</span><span class="date">'+time+'</span></p>');
+                var $p2 = $('<p class="hua">'+user.word+'</p>');
+                var $li = $('<li></li>');
+                $li.append($p1).append($p2).appendTo($chatsUl);
+            }) */
+
+            // 服务器通知我谁走了，我把它从用户列表删除
+           /*  socket.on("someoneLeave", function(id) {
+                console.log(id+"离开了");
+                var lis = $friendsUl.children("li");
+                // console.log(lis);
+                for(var i in lis) {
+                    if(lis.eq(i).attr("data-id") === id) {
+                        lis.eq(i).remove();
+                    }
+                }
+            }) */
+
+            // 服务器告诉我把我有人把我挤走了
+           /*  socket.on("bye", function() {
+                socket.disconnect();
+                $word.attr("disabled", "false");//挤走了不能再发言了
+                alert("我被挤走了。。。");
+            }) */
+
+            // 键盘点击事件
+
+            // 退出登录
+           /*  $(".exit").click(function() {
+                var exit = confirm("确定要退出么?");
+                if(exit) {
+                    $.ajax({
+                        url: "/exit",
+                        type: "get",
+                        dataType: "json",
+                        success: function(data) {
+                            console.log(data);
+                            if(!data.error) {
+                                location.href = "/login.html";
+                            }
+                        }
+                    })
+                }
+            }) */
+
+
+        </script>
+    </body>
+</html>
