@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+.idea
+Thumbs.db
+*.bak
+*.tem
+*.temp
+*.psd
+*.avi
+*.mp4
+*.rar
+*.zip
+*.ickt
+package-lock.json
